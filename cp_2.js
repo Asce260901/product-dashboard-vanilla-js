@@ -28,12 +28,15 @@ function displayProducts(products) {
     container.innerHTML = '';
     
     products.slice(0, 5).forEach(product => {
+        const { name, price, image } = product.fields;
         const productCard = document.createElement('div');
         productCard.className = 'product-card';
         productCard.innerHTML = `
-            <img src="${product.image}" alt="${product.name}">
-            <h3>${product.name}</h3>
-            <p>$${(product.price / 100).toFixed(2)}</p>
+             <img src="${image[0].url}" alt="${name}">
+            <div class="card-body">
+                <h3>${name}</h3>
+                <p class="price">$${(price / 100).toFixed(2)}</p>
+            </div>
         `;
         container.appendChild(productCard);
     });
