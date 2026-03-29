@@ -39,6 +39,26 @@ function displayProducts(products) {
     // Wire up the Load More button
     const btn = document.getElementById('load-more-btn');
     btn.addEventListener('click', loadMoreProducts);
+
+    // Wire up the Reset button
+    const resetBtn = document.getElementById('reset-btn');
+    resetBtn.addEventListener('click', resetProducts);
+}
+
+function resetProducts() {
+    // Reset index and clear container
+    currentIndex = 0;
+    document.getElementById('product-container').innerHTML = '';
+
+    // Show Load More button again
+    const btn = document.getElementById('load-more-btn');
+    btn.style.display = 'block';
+
+    // Load the first batch
+    loadMoreProducts();
+
+    // Scroll back to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function loadMoreProducts() {

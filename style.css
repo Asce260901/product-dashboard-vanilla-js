@@ -117,11 +117,12 @@ main {
 .btn-container {
     text-align: center;
     margin: 2.5rem 0 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
 
-#load-more-btn {
-    background-color: var(--primary);
-    color: #fff;
+#load-more-btn, #reset-btn {
     border: none;
     padding: 0.75rem 2.2rem;
     font-size: 0.95rem;
@@ -134,7 +135,24 @@ main {
     transition: background-color var(--transition), transform var(--transition);
 }
 
+#load-more-btn {
+    background-color: var(--primary);
+    color: #fff;
+}
+
 #load-more-btn:hover {
     background-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+#reset-btn {
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+#reset-btn:hover {
+    background-color: var(--primary);
+    color: #fff;
     transform: translateY(-2px);
 }
