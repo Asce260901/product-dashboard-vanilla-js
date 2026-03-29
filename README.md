@@ -1,0 +1,1 @@
+A vanilla JavaScript product dashboard that fetches furniture data from a live API using both fetch().then() and async/await. Products are displayed in a responsive card grid with a Load More button to paginate through results and a Reset button to return to the initial view.
